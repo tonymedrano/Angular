@@ -5,7 +5,7 @@ eventsApp.controller('EventController',
     $scope.snippet = '<span style="color:red;">Hi there!</span>';
     $scope.sortorder = 'name';
     
-    eventData.getEvent(function(evetnt){
+    eventData.getEvent(function(event){
     $scope.event = event;
     });
 
