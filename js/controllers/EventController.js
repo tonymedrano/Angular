@@ -5,9 +5,13 @@ eventsApp.controller('EventController',
     $scope.snippet = '<span style="color:red;">Hi there!</span>';
     $scope.sortorder = 'name';
     
-    eventData.getEvent(function(event){
+   /* eventData.getEvent(function(event){ // $http way
     $scope.event = event;
-    });
+    });*/
+    
+   // $scope.event = eventData.getEvent();  // Resource way or
+    
+    
 
     $scope.upVoteSession = function(session){
         session.upVoteCount++;
