@@ -5,7 +5,12 @@ eventsApp.controller('EventController',
     $scope.snippet = '<span style="color:red;">Hi there!</span>';
     $scope.sortorder = 'name';
     
-   /* eventData.getEvent(function(event){ // $http way
+    eventData.getEvent().$promise.then(  // promise way
+        function(event){$scope.event = event; console.log(event);},
+        function(response){ console.log(response);}
+    );
+    
+    /* eventData.getEvent(function(event){ // $http way
     $scope.event = event;
     });*/
     
